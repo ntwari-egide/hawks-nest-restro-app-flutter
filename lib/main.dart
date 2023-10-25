@@ -3,6 +3,7 @@ import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hawks_nest_app/categories/CategoryScreen.dart';
+import 'package:hawks_nest_app/screen/welcome.dart';
 
 final theme = ThemeData(
   useMaterial3: true,
@@ -40,7 +41,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const CategoryScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
