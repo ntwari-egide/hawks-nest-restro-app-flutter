@@ -1,9 +1,9 @@
 // Category screen class
 
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/data/categories.dart';
 
 class CategoryScreen extends StatelessWidget {
-
   const CategoryScreen({super.key});
 
   @override
@@ -12,15 +12,23 @@ class CategoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('List of Food Categories'),
       ),
-      body: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 20, childAspectRatio: 3/2),
-      children: const [
-        Text("Category 1"),
-        Text("Category 2"),
-        Text("Category 3"),
-        Text("Category 4"),
-        Text("Category 5"),
-      ],
-      )
+      body: GridView(
+          padding: const EdgeInsets.all(15),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing:20 , childAspectRatio: 3 / 2),
+          children: foodCategories
+              .map((food) => (Container(
+                    padding: const EdgeInsets.all(15),
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [food.color.withOpacity(0.7), food.color],
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight),
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Text(food.title),
+                  )))
+              .toList()),
     );
   }
 }
