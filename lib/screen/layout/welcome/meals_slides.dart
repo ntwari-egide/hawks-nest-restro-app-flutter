@@ -40,11 +40,12 @@ class _MealDiscountSlidesState extends State<MealDiscountSlides> {
             },
           ),
           items: imgList
-              .map((item) => Container(
-                    child: Image.network(item, fit: BoxFit.cover, width: 1000.0),
+              .map((item) => SlideContent(
+                    item: item,
                   ))
               .toList(),
         ),
+        const SizedBox(height: 10.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: imgList.asMap().entries.map((entry) {
@@ -56,16 +57,120 @@ class _MealDiscountSlidesState extends State<MealDiscountSlides> {
               child: Container(
                 width: 12.0,
                 height: 12.0,
-                margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: _current == entry.key ? Colors.blue : Colors.grey,
+                  color: _current == entry.key
+                      ? Colors.orange
+                      : const Color.fromARGB(58, 0, 0, 0),
                 ),
               ),
             );
           }).toList(),
         ),
       ],
+    );
+  }
+}
+
+class SlideContent extends StatelessWidget {
+  const SlideContent({
+    super.key,
+    required this.item,
+  });
+
+  final String item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: NetworkImage(item),
+          fit: BoxFit.cover,
+        ),
+        borderRadius: BorderRadius.circular(10.0),
+      ),
+      child: SizedBox(
+        width: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10.0),
+              ),
+              child: const Text(
+                'Limited time!',
+                style: TextStyle(
+                  fontSize: 12,
+                ),
+              ),
+            ),
+            const SizedBox(height: 10.0),
+            const Text(
+              'Get Special Discount',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(height: 10.0),
+            const Row(
+              children: [
+                Text(
+                  "Up to",
+                  style: TextStyle(color: Colors.white),
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  "40%",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                )
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "All dishes available ",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                      fontWeight: FontWeight.bold),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0)
+                  ),
+                  child: const Text(
+                    "Claim",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

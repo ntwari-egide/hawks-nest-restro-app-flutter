@@ -41,6 +41,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 fontWeight: FontWeight.w600
               ),
             ),
+            SizedBox(height: 20.0),
             // create a slide show of food using the carousel slider
             MealDiscountSlides()
           ],
