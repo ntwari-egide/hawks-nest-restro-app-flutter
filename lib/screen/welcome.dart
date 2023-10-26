@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/app_bar.dart';
+import 'package:hawks_nest_app/screen/layout/welcome/search.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -24,29 +25,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             child: AppBarWidget(),
           ),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+        body: const Center(
+          child:  Column(
             children: [
-              const Text(
-                'Welcome to Hawks Nest',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 30.0),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const WelcomeScreen()),
-                  );
-                },
-                child: const Text('Get Started'),
-              ),
+              SearchWidget(),
             ],
           ),
         ));
