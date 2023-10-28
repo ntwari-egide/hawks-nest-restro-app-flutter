@@ -16,7 +16,7 @@ class _SearchWidgetState extends State<SearchWidget> {
       // mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
           // add border rounded border
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(40),

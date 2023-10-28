@@ -84,7 +84,8 @@ class SlideContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Flexible( 
+      child: Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -171,6 +172,6 @@ class SlideContent extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ),);
   }
 }
