@@ -98,6 +98,8 @@ class SlideContent extends StatelessWidget {
         width: double.infinity,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          //space between the children
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Container(
               padding:
@@ -113,7 +115,6 @@ class SlideContent extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10.0),
             const Text(
               'Get Special Discount',
               style: TextStyle(
@@ -122,7 +123,6 @@ class SlideContent extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            const SizedBox(height: 10.0),
             const Row(
               children: [
                 Text(

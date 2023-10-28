@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:hawks_nest_app/categories/CategoryScreen.dart';
-import 'package:hawks_nest_app/screen/welcome.dart';
+import 'package:hawks_nest_app/screen/layout/welcome/welcome.dart';
 
 final theme = ThemeData(
   useMaterial3: true,

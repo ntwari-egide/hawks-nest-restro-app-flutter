@@ -2,17 +2,17 @@
 
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/app_bar.dart';
-import 'package:hawks_nest_app/screen/layout/welcome/meals_slides.dart';
-import 'package:hawks_nest_app/screen/layout/welcome/search.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/meals_slides.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/search.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({super.key});
+class DashboardWelcomeScreen extends StatefulWidget {
+  const DashboardWelcomeScreen({super.key});
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<DashboardWelcomeScreen> createState() => _DashboardWelcomeScreenState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _DashboardWelcomeScreenState extends State<DashboardWelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
