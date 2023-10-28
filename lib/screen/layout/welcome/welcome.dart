@@ -1,6 +1,7 @@
 // class of welcome page with just name
 
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/layout/auth/login_screen.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/welcome.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -61,7 +62,7 @@ class WelcomeScreen extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                           builder: (context) =>
-                              const DashboardWelcomeScreen()));
+                              const LoginScreen()));
                 },
                 style: TextButton.styleFrom(
                   // width full
