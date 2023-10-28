@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hawks_nest_app/screen/layout/dashboard/welcome.dart';
+import 'package:hawks_nest_app/screen/layout/auth/otp_verification.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);
@@ -43,7 +43,7 @@ class _LoginFormState extends State<LoginForm> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const DashboardWelcomeScreen(),
+                  builder: (context) => OTPVerificationWidget(),
                 ),
               );
             },
@@ -112,7 +112,7 @@ class _LoginFormState extends State<LoginForm> {
                     width: 1,
                   ),
                 ),
-                child: Icon(Icons.facebook),
+                child: const Icon(Icons.facebook),
               ),
             ],
           )
