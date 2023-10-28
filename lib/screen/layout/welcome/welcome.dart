@@ -21,20 +21,68 @@ class WelcomeScreen extends StatelessWidget {
                 child: Image.network(
                   'https://images.pexels.com/photos/3184188/pexels-photo-3184188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
                   width: 400,
-                  height: 700,
+                  height: 400,
                   fit: BoxFit.cover,
                 ),
               ),
               const SizedBox(height: 20.0),
-              const Text(
-                "Discover Delicious Eats in Bethlehem, PA",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w600,
-                  color: Colors.black,
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: const Text(
+                  "Discover Delicious Eats in Lehigh Valley",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
               ),
+              const SizedBox(height: 30.0),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: const Text(
+                  "Order food from your favorite restaurants and have it delivered to your doorstep! Fast delivery with real-time GPS tracking!",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(height: 30.0),
+
+              // Let's go button
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/dashboard',);
+                  },
+                  child: const Text(
+                    'Let\'s Go!',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w600,
+                      color: const Color.fromARGB(232, 255, 255, 255),
+                    ),
+                  ),
+                  style: TextButton.styleFrom(
+                    // width full
+                    minimumSize: const Size(double.infinity, 50.0),
+                    backgroundColor: Colors.orange,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20.0, vertical: 15.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100.0),
+                    ),
+                  ),
+                ),
+              ),
+                const SizedBox(height: 10.0),
             ],
+            
           ),
         ),
       ),
