@@ -60,8 +60,9 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
           });
         },
       ),
-      body: SizedBox(
-        height: double.infinity,
+      body: 
+      SingleChildScrollView(
+        child: SizedBox(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -273,7 +274,8 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
                               SizedBox(height: 20),
                               SearchWidget(),
                               SizedBox(height: 20),
-                              // RecommendedMealWidget()
+                              RecommendedMealWidget(),
+                              RecommendedMealWidget()
                             ],
                           ),
                         ),
@@ -285,6 +287,7 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
             )
           ],
         ),
+      )
       ),
     );
   }
