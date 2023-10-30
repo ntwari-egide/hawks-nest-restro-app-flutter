@@ -16,6 +16,7 @@ class _RecommendedMealWidgetState extends State<RecommendedMealWidget> {
     return Column(children: [
       ExpansionTile(
         initiallyExpanded: true,
+        tilePadding: EdgeInsets.zero,
         collapsedIconColor: Colors.orange,
         title: const Text(
           "Recommended (3)",
