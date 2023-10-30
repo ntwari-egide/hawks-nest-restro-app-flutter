@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/app_bar.dart';
-import 'package:hawks_nest_app/screen/layout/dashboard/home/category.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/home/meals_slides.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/home/search.dart';
 
@@ -33,6 +32,32 @@ class _DashboardWelcomeScreenState extends State<DashboardWelcomeScreen> {
         unselectedItemColor: Colors.grey[600],
         showUnselectedLabels: true,
         onTap: (index) {
+          if (index == 0) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DashboardWelcomeScreen()),
+            );
+          } else if (index == 1) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DashboardWelcomeScreen()),
+            );
+          } else if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DashboardWelcomeScreen()),
+            );
+          } else if (index == 3) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DashboardWelcomeScreen()),
+            );
+          } else if (index == 4) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DashboardWelcomeScreen()),
+            );
+          }
           // Handle tab selection
           setState(() {
             currentIndex = index;
@@ -92,13 +117,14 @@ final List<BottomNavigationBarItem> bottomNavItems = [
       label: 'Home',
     ),
     const BottomNavigationBarItem(
+      icon: Icon(Icons.menu_book),
+      label: 'Menu',
+    ),
+    const BottomNavigationBarItem(
       icon: Icon(Icons.check_box),
       label: 'Orders',
     ),
-    const BottomNavigationBarItem(
-      icon: Icon(Icons.favorite),
-      label: 'Favorites',
-    ),
+    
     const BottomNavigationBarItem(
       icon: Icon(Icons.shopping_cart),
       label: 'Cart',
