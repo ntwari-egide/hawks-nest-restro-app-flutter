@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/app_bar.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/home/meals_slides.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/home/search.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/menu/welcome.dart';
 
 class DashboardWelcomeScreen extends StatefulWidget {
   const DashboardWelcomeScreen({super.key});
@@ -40,7 +41,7 @@ class _DashboardWelcomeScreenState extends State<DashboardWelcomeScreen> {
           } else if (index == 1) {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => DashboardWelcomeScreen()),
+              MaterialPageRoute(builder: (context) => MenuWelcomeScreen()),
             );
           } else if (index == 2) {
             Navigator.push(
