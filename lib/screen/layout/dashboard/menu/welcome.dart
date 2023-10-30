@@ -1,7 +1,6 @@
 // welcome page
 
 import 'package:flutter/material.dart';
-import 'package:hawks_nest_app/screen/layout/app_bar.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/home/search.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/home/welcome.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/menu/recommended.dart';
@@ -74,7 +73,7 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage(
-                          'https://images.pexels.com/photos/3887985/pexels-photo-3887985.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                          'https://images.pexels.com/photos/4344544/pexels-photo-4344544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
                       fit: BoxFit.cover,
                     ),
                   ),
@@ -155,7 +154,7 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
                               margin: const EdgeInsets.only(top: 18),
                               padding: const EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 12),
-                              height: 200,
+                              height: 190,
                               width: double.infinity,
                               decoration: BoxDecoration(
                                 color: Colors.white,
@@ -163,9 +162,9 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
                                 // add border and shodown bottom
                                 boxShadow: const [
                                   BoxShadow(
-                                    color: Colors.white,
-                                    spreadRadius: 1,
-                                    blurRadius: 1,
+                                    color: Color.fromARGB(12, 0, 0, 0),
+                                    spreadRadius: 6,
+                                    blurRadius: 4,
                                     offset: Offset(0, 1),
                                   ),
                                 ],
