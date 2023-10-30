@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/auth/login_screen.dart';
-import 'package:hawks_nest_app/screen/layout/dashboard/welcome.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

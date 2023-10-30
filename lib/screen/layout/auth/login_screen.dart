@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/auth/forms/login_form.dart';
-import 'package:hawks_nest_app/screen/layout/dashboard/welcome.dart';
 import 'package:hawks_nest_app/screen/layout/welcome/welcome.dart';
 
 class LoginScreen extends StatefulWidget {

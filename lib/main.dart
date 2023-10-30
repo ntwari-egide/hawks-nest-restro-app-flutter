@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_splash_screen/flutter_splash_screen.dart';
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/home/welcome.dart';
 import 'package:hawks_nest_app/screen/layout/welcome/welcome.dart';
 
 final theme = ThemeData(
@@ -40,7 +41,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      home: const WelcomeScreen(),
+      home: const DashboardWelcomeScreen(),
     );
   }
 }

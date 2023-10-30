@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hawks_nest_app/screen/layout/dashboard/welcome.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/home/welcome.dart';
 
 class OTPVerificationWidget extends StatefulWidget {
   const OTPVerificationWidget({super.key});
