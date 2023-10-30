@@ -275,7 +275,6 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
                               SearchWidget(),
                               SizedBox(height: 20),
                               RecommendedMealWidget(),
-                              RecommendedMealWidget()
                             ],
                           ),
                         ),

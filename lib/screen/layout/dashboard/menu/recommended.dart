@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/menu/meal_display.dart';
 
 class RecommendedMealWidget extends StatefulWidget {
   const RecommendedMealWidget({super.key});
@@ -14,21 +15,29 @@ class _RecommendedMealWidgetState extends State<RecommendedMealWidget> {
   Widget build(BuildContext context) {
     return Column(children: [
       ExpansionTile(
-        title: const Text("Recommended (3)", style: TextStyle(
-          fontSize: 17,
-          fontWeight: FontWeight.bold,
-        ),),
+        initiallyExpanded: true,
+        collapsedIconColor: Colors.orange,
+        title: const Text(
+          "Recommended (3)",
+          style: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         controller: _controller,
+        // controlAffinity: ListTileControlAffinity.trailing,
         children: [
-          const ListTile(
-            title: Text("Recommended 1"),
-          ),
-          const ListTile(
-            title: Text("Recommended 2"),
-          ),
-          const ListTile(
-            title: Text("Recommended 3"),
-          ),
+          SizedBox(
+            height: 420,
+            child: ListView.builder(
+              // add gap-4 between each item
+              padding: const EdgeInsets.all(4),
+              itemCount: 4,
+              itemBuilder: (context, index) {
+                return const MealDisplay();
+              },
+            ),
+          )
         ],
       ),
     ]);
