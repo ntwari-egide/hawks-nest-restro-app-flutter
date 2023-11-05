@@ -90,7 +90,7 @@ class _CartItemWidgetState extends State<CartItemWidget> {
               ],
             ),
             Text(
-              'Add \$${(_itemCount * price).toStringAsFixed(2)}',
+              '\$${(_itemCount * price).toStringAsFixed(2)}',
               textAlign: TextAlign.start,
               style: const TextStyle(
                 fontSize: 18,

@@ -50,18 +50,66 @@ class _CartViewScreenState extends State<CartViewScreen> {
                     color: const Color.fromARGB(25, 3, 3, 3),
                     width: 1,
                   ),
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(10.0),
+                      topRight: Radius.circular(10.0)),
                 ),
                 padding: const EdgeInsets.symmetric(
                     horizontal: 20.0, vertical: 10.0),
                 child: const Column(
                   children: [
                     CartItemWidget(),
-                    Divider(height: 30,color: Color.fromARGB(30, 0, 0, 0),),
+                    Divider(
+                      height: 30,
+                      color: Color.fromARGB(30, 0, 0, 0),
+                    ),
                     CartItemWidget(),
                   ],
                 ),
-              )
+              ),
+              Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: const Color.fromARGB(25, 3, 3, 3),
+                      width: 1,
+                    ),
+                    borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(10.0),
+                      bottomRight: Radius.circular(10.0),
+                    ),
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: TextButton(
+                    child: Row(
+                      children: [
+                        const Text(
+                          "Add more items",
+                          style: TextStyle(
+                              color: Color.fromARGB(128, 0, 0, 0),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600),
+                        ),
+                        const Spacer(),
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: const Color.fromARGB(25, 3, 3, 3),
+                              width: 1,
+                            ),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(100.0)),
+                          ),
+                          padding: const EdgeInsets.all(5.0),
+                          child: const Icon(
+                            Icons.add,
+                            color: Color.fromARGB(128, 0, 0, 0),
+                            size: 15,
+                          ),
+                        )
+                      ],
+                    ),
+                    onPressed: () {},
+                  ))
             ],
           ),
         ),
