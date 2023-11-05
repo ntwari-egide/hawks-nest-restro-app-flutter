@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/cart/cart_item.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/reusable/bottom_nav.dart';
-import 'package:hawks_nest_app/screen/reusables/bottom_drawer.dart';
 
 class CartViewScreen extends StatefulWidget {
   const CartViewScreen({super.key});
@@ -39,8 +38,10 @@ class _CartViewScreenState extends State<CartViewScreen> {
           BottomNavigationBarWidget(currentIndex: currentIndex),
       body: SingleChildScrollView(
         child: Container(
+          height: MediaQuery.of(context).size.height,
           color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
+          margin: const EdgeInsets.only(top: 20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
