@@ -40,7 +40,7 @@ class _AddToCardDrawerState extends State<AddToCardDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 450,
+        height: 420,
         decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
