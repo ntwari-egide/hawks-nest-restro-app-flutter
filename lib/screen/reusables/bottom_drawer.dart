@@ -7,7 +7,36 @@ class AddToCardDrawer extends StatefulWidget {
   State<AddToCardDrawer> createState() => _AddToCardDrawerState();
 }
 
+enum ChangeType {
+  increment,
+  decrement,
+}
+
 class _AddToCardDrawerState extends State<AddToCardDrawer> {
+
+  // item counter state
+  int _itemCount = 1;
+  double price = 5.78;
+
+  // use enum to define the change type
+  onChanged(ChangeType changeType) {
+    switch (changeType) {
+      case ChangeType.increment:
+        setState(() {
+          _itemCount++;
+        });
+        break;
+      case ChangeType.decrement:
+        setState(() {
+          // not less than 0
+          if (_itemCount > 0) {
+            _itemCount--;
+          }
+        });
+        break;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -113,33 +142,35 @@ class _AddToCardDrawerState extends State<AddToCardDrawer> {
                           ),
                           borderRadius: BorderRadius.circular(100.0),
                         ),
-                        child: Row(children: [
-                          TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              "-",
-                              style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.black,
+                        child: Row(
+                          children: [
+                            TextButton(
+                              onPressed: () => onChanged(ChangeType.decrement),
+                              child: const Text(
+                                "-",
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                          const Text(
-                            "1",
-                            style:
-                                TextStyle(fontSize: 20, color: Colors.orange),
-                          ),
-                          TextButton(
-                            onPressed: () {},
-                            child: const Text(
-                              "+",
-                              style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.black,
+                            Text(
+                              "$_itemCount",
+                              style:
+                                  const TextStyle(fontSize: 20, color: Colors.orange),
+                            ),
+                            TextButton(
+                              onPressed: () => onChanged(ChangeType.increment),
+                              child: const Text(
+                                "+",
+                                style: TextStyle(
+                                  fontSize: 30,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                        ]),
+                          ],
+                        ),
                       ),
                       TextButton(
                         onPressed: () {},
@@ -150,9 +181,12 @@ class _AddToCardDrawerState extends State<AddToCardDrawer> {
                             color: Colors.orange,
                             borderRadius: BorderRadius.circular(100.0),
                           ),
-                          child: const Text(
-                            'Add item \$5.78',
-                            style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+                          child: Text(
+                            'Add \$${(_itemCount * price).toStringAsFixed(2)}',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold),
                           ),
                         ),
                       ),
