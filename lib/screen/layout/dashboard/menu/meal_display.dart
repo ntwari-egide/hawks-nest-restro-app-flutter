@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/reusables/bottom_drawer.dart';
 
 class MealDisplay extends StatefulWidget {
   const MealDisplay({super.key});
@@ -116,7 +117,9 @@ class _MealDisplayState extends State<MealDisplay> {
                           'Add',
                           style: TextStyle(color: Colors.white),
                         ),
-                        onPressed: () {}),
+                        onPressed: () {
+                          showModalBottomSheet(context: context, builder: (context) => const AddToCardDrawer());
+                        }),
                   )
                 ],
               ),
