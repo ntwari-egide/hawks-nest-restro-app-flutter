@@ -39,6 +39,7 @@ class _CartViewScreenState extends State<CartViewScreen> {
           BottomNavigationBarWidget(currentIndex: currentIndex),
       body: SingleChildScrollView(
         child: Container(
+          color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -68,48 +69,92 @@ class _CartViewScreenState extends State<CartViewScreen> {
                 ),
               ),
               Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                      color: const Color.fromARGB(25, 3, 3, 3),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: const Color.fromARGB(25, 3, 3, 3),
+                    width: 1,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(10.0),
+                    bottomRight: Radius.circular(10.0),
+                  ),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: TextButton(
+                  child: Row(
+                    children: [
+                      const Text(
+                        "Add more items",
+                        style: TextStyle(
+                            color: Color.fromARGB(128, 0, 0, 0),
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      const Spacer(),
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: const Color.fromARGB(25, 3, 3, 3),
+                            width: 1,
+                          ),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(100.0)),
+                        ),
+                        padding: const EdgeInsets.all(5.0),
+                        child: const Icon(
+                          Icons.add,
+                          color: Color.fromARGB(128, 0, 0, 0),
+                          size: 15,
+                        ),
+                      )
+                    ],
+                  ),
+                  onPressed: () {},
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              const Text(
+                "Offers and Discounts",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              ElevatedButton(
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  // add border and border radius
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    side: const BorderSide(
+                      color: Color.fromARGB(25, 3, 3, 3),
                       width: 1,
                     ),
-                    borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(10.0),
-                      bottomRight: Radius.circular(10.0),
-                    ),
                   ),
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: TextButton(
-                    child: Row(
-                      children: [
-                        const Text(
-                          "Add more items",
-                          style: TextStyle(
-                              color: Color.fromARGB(128, 0, 0, 0),
-                              fontSize: 15,
-                              fontWeight: FontWeight.w600),
-                        ),
-                        const Spacer(),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: const Color.fromARGB(25, 3, 3, 3),
-                              width: 1,
-                            ),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(100.0)),
-                          ),
-                          padding: const EdgeInsets.all(5.0),
-                          child: const Icon(
-                            Icons.add,
-                            color: Color.fromARGB(128, 0, 0, 0),
-                            size: 15,
-                          ),
-                        )
-                      ],
+                  elevation: 0,
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 10.0),
+                ),
+                child: const Row(
+                  children: [
+                     Text(
+                      "Apply Coupon",
+                      style: TextStyle(
+                          color: Color.fromARGB(128, 0, 0, 0),
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
                     ),
-                    onPressed: () {},
-                  ))
+                     Spacer(),
+                     Icon(
+                        Icons.arrow_right_outlined,
+                        color: Colors.orange,
+                        size: 30,
+                      ),
+                  ],
+                ),
+              )
             ],
           ),
         ),
