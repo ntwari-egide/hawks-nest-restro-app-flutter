@@ -139,22 +139,42 @@ class _CartViewScreenState extends State<CartViewScreen> {
                 ),
                 child: const Row(
                   children: [
-                     Text(
+                    Text(
                       "Apply Coupon",
                       style: TextStyle(
                           color: Color.fromARGB(128, 0, 0, 0),
                           fontSize: 15,
                           fontWeight: FontWeight.w600),
                     ),
-                     Spacer(),
-                     Icon(
-                        Icons.arrow_right_outlined,
-                        color: Colors.orange,
-                        size: 30,
-                      ),
+                    Spacer(),
+                    Icon(
+                      Icons.arrow_right_outlined,
+                      color: Colors.orange,
+                      size: 30,
+                    ),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(height: 20.0),
+              TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100.0),
+                  ),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 20.0, vertical: 14.0),
+                ),
+                child: Container(
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  child: const Text(
+                    'Add Address to Proceed',
+                    style: TextStyle(color: Colors.white, fontSize: 18,fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
