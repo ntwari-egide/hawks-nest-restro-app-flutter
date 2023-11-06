@@ -20,7 +20,7 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 250,
+            expandedHeight: 50,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.network(
