@@ -42,8 +42,8 @@ class _RestroTabsState extends State<RestroTabs> {
               child: TabBarView(
                 children: [
                   Container(
-                    child: // grid of rounded network images
-                        GridView.count(
+                    margin: const EdgeInsets.all(0),
+                    child: GridView.count(
                       crossAxisCount: 2,
                       children: List.generate(9, (index) {
                         return Container(
@@ -61,8 +61,49 @@ class _RestroTabsState extends State<RestroTabs> {
                     ),
                   ),
                   Container(
-                    child: const Center(
-                      child: Text('Menu'),
+                    margin: const EdgeInsets.all(0),
+                    child: GridView.count(
+                      crossAxisCount: 2,
+                      children: List.generate(3, (index) {
+                        return Container(
+                          margin: const EdgeInsets.all(5.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: const DecorationImage(
+                              image: NetworkImage(
+                                  'https://images.pexels.com/photos/1639556/pexels-photo-1639556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              color: Colors.black.withOpacity(0.3),
+                            ),
+                            child: const Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Food Menu',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  '4 pages',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      }),
                     ),
                   ),
                   Container(
