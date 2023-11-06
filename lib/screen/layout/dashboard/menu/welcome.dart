@@ -20,7 +20,7 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            expandedHeight: 50,
+            expandedHeight: 80,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               background: Image.network(
@@ -50,11 +50,11 @@ class _MenuWelcomeScreenState extends State<MenuWelcomeScreen> {
                                   Radius.circular(100.0),
                                 ),
                               ),
-                              child: const Icon(
+                              child: IconButton(icon: const Icon(
                                 Icons.arrow_back_ios_new_sharp,
                                 color: Colors.black,
                                 size: 16,
-                              ),
+                              ),onPressed: () => Navigator.pop(context),)
                             ),
                             Row(
                               children: [

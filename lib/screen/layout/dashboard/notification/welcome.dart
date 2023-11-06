@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/notification/notifcation_view.dart';
-import 'package:hawks_nest_app/screen/layout/dashboard/reusable/bottom_nav.dart';
 
 class NotificationPageWidget extends StatefulWidget {
   const NotificationPageWidget({super.key});
