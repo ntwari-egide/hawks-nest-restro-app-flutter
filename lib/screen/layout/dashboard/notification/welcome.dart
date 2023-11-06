@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/notification/notifcation_view.dart';
 
 class NotificationPageWidget extends StatefulWidget {
   const NotificationPageWidget({super.key});
@@ -37,16 +38,23 @@ class _NotificationPageWidgetState extends State<NotificationPageWidget> {
           color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
           margin: const EdgeInsets.only(top: 20.0),
-          child: Column(
+          child: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Text(
+               Text(
                 "Today",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(height: 20.0),
-              
+              SizedBox(height: 20.0),
+              NotificationView(),
+              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),),
+              NotificationView(),
+              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),),
+              NotificationView(),
+              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),),
+              NotificationView(),
+              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),)
             ],
           ),
         ),
