@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hawks_nest_app/screen/layout/dashboard/notification/notifcation_view.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/reusable/bottom_nav.dart';
 
 class NotificationPageWidget extends StatefulWidget {
   const NotificationPageWidget({super.key});
@@ -14,6 +15,30 @@ class _NotificationPageWidgetState extends State<NotificationPageWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomAppBar(
+        child: TextButton(
+          onPressed: () {},
+          style: TextButton.styleFrom(
+            backgroundColor: Colors.orange,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(100.0),
+            ),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 14.0),
+          ),
+          child: Container(
+            width: double.infinity,
+            alignment: Alignment.center,
+            child: const Text(
+              'Clear',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500),
+            ),
+          ),
+        ),
+      ),
       appBar: AppBar(
         title: const Text(
           'Notifications',
@@ -42,19 +67,40 @@ class _NotificationPageWidgetState extends State<NotificationPageWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-               Text(
+              Text(
                 "Today",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 20.0),
               NotificationView(),
-              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),),
+              Divider(
+                height: 40,
+                color: Color.fromARGB(23, 0, 0, 0),
+              ),
               NotificationView(),
-              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),),
+              Divider(
+                height: 40,
+                color: Color.fromARGB(23, 0, 0, 0),
+              ),
               NotificationView(),
-              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),),
+              Divider(
+                height: 40,
+                color: Color.fromARGB(23, 0, 0, 0),
+              ),
               NotificationView(),
-              Divider(height: 40, color: Color.fromARGB(23, 0, 0, 0),)
+              SizedBox(height: 20.0),
+              Text(
+                "Yesterday",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20.0),
+              NotificationView(),
+              Divider(
+                height: 40,
+                color: Color.fromARGB(23, 0, 0, 0),
+              ),
+              NotificationView(),
+              SizedBox(height: 20.0),
             ],
           ),
         ),
