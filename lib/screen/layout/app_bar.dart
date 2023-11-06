@@ -39,15 +39,18 @@ class AppBarWidget extends StatelessWidget {
               ),
               CircleAvatar(
                 backgroundColor: const Color.fromARGB(255, 228, 228, 228),
-                child:  IconButton(onPressed: () {
-                        //send to the notification widget
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const NotificationPageWidget(),
-                          ),
-                        );
-                      }, icon: const Icon(Icons.notifications_active, color: Colors.black),),
+                child: IconButton(
+                  onPressed: () {
+                    //send to the notification widget
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const NotificationPageWidget(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.notifications_active,
+                      color: Colors.black),
+                ),
               ),
             ],
           ),

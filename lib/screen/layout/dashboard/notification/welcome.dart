@@ -37,16 +37,16 @@ class _NotificationPageWidgetState extends State<NotificationPageWidget> {
           color: Colors.white,
           padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
           margin: const EdgeInsets.only(top: 20.0),
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Today",
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 20.0),
-
+              const SizedBox(height: 20.0),
+              
             ],
           ),
         ),
