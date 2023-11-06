@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/restro_details/welcome.dart';
 
 final List<String> imgList = [
   'https://images.pexels.com/photos/1146760/pexels-photo-1146760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
@@ -84,8 +85,12 @@ class SlideContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Container(
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(builder: (ctx) => const RestroDetails())
+      ),
+      child: Flexible(
+        child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
               image: NetworkImage(item),
@@ -191,7 +196,9 @@ class SlideContent extends StatelessWidget {
                 ),
               ),
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
