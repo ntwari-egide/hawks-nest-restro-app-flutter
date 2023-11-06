@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/restro_details/restro_tabs.dart';
 
 class RestroDetails extends StatefulWidget {
   const RestroDetails({super.key});
@@ -305,6 +306,7 @@ class _RestroDetailsState extends State<RestroDetails> {
             const SizedBox(
               height: 20,
             ),
+            const RestroTabs(),
           ],
         ),
       ),
