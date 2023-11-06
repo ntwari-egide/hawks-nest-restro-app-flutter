@@ -19,16 +19,16 @@ class _RestroDetailsState extends State<RestroDetails> {
       body: SingleChildScrollView(
         child: Stack(
           children: [
-             Container(
+            Container(
               height: 270,
               width: double.infinity,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: NetworkImage(
-                      'https://images.pexels.com/photos/3184188/pexels-photo-3184188.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
+                      'https://images.pexels.com/photos/3534750/pexels-photo-3534750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'),
                   fit: BoxFit.cover,
                 ),
-              ),  
+              ),
             ),
             Container(
               padding: const EdgeInsets.only(top: 50, left: 20, right: 20),
@@ -101,7 +101,7 @@ class _RestroDetailsState extends State<RestroDetails> {
                           horizontal: 20,
                           vertical: 12,
                         ),
-                        height: 190,
+                        height: 250,
                         width: double.infinity,
                         decoration: BoxDecoration(
                           color: Colors.white,
@@ -119,31 +119,31 @@ class _RestroDetailsState extends State<RestroDetails> {
                             width: 1,
                           ),
                         ),
-                        child: const Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            SizedBox(height: 20),
-                            Text(
+                            const SizedBox(height: 20),
+                            const Text(
                               "Good Food",
                               style: TextStyle(
                                 fontSize: 20,
                               ),
                             ),
-                            SizedBox(height: 5),
-                            Text(
+                            const SizedBox(height: 5),
+                            const Text(
                               "Cheese Burger, Fries, Coke, Salad...",
                               style: TextStyle(
                                 fontSize: 15,
                                 color: Color.fromARGB(142, 0, 0, 0),
                               ),
                             ),
-                            SizedBox(height: 5),
-                            Divider(
+                            const SizedBox(height: 5),
+                            const Divider(
                               color: Color.fromARGB(36, 0, 0, 0),
                             ),
-                            SizedBox(height: 5),
-                            Row(
+                            const SizedBox(height: 5),
+                            const Row(
                               children: [
                                 Icon(
                                   Icons.location_on_outlined,
@@ -160,8 +160,8 @@ class _RestroDetailsState extends State<RestroDetails> {
                                 ),
                               ],
                             ),
-                            SizedBox(height: 5),
-                            Row(
+                            const SizedBox(height: 5),
+                            const Row(
                               children: [
                                 Icon(
                                   Icons.timelapse_sharp,
@@ -178,6 +178,85 @@ class _RestroDetailsState extends State<RestroDetails> {
                                 ),
                               ],
                             ),
+                            const SizedBox(height: 10),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: Colors.orange,
+                                      width: 1,
+                                    ),
+                                    borderRadius: BorderRadius.circular(100.0),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: () {},
+                                    style: TextButton.styleFrom(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 20.0,
+                                        vertical: 5.0,
+                                      ),
+                                    ),
+                                    child: const Row(
+                                      children: [
+                                        Icon(
+                                          Icons.directions_bike_outlined,
+                                          color: Colors.orange,
+                                          size: 20,
+                                        ),
+                                        SizedBox(width: 15),
+                                        Text(
+                                          "Direction",
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.orange,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.orange,
+                                    border: Border.all(
+                                      color: Colors.orange,
+                                      width: 1,
+                                    ),
+                                    borderRadius: BorderRadius.circular(100.0),
+                                  ),
+                                  child: TextButton(
+                                    onPressed: () {},
+                                    style: TextButton.styleFrom(
+                                      padding: const EdgeInsets.symmetric(
+                                        horizontal: 40.0,
+                                        vertical: 5.0,
+                                      ),
+                                    ),
+                                    child: const Row(
+                                      children: [
+                                        Icon(
+                                          Icons.call_outlined,
+                                          color: Colors.white,
+                                          size: 20,
+                                        ),
+                                        SizedBox(width: 15),
+                                        Text(
+                                          "Call",
+                                          style: TextStyle(
+                                            fontSize: 15,
+                                            fontWeight: FontWeight.w600,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                )
+                              ],
+                            )
                           ],
                         ),
                       ),
