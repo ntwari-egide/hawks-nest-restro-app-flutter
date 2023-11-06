@@ -52,11 +52,13 @@ class _RestroDetailsState extends State<RestroDetails> {
                                     Radius.circular(100.0),
                                   ),
                                 ),
-                                child: const Icon(
+                                child: IconButton(icon: const Icon(
                                   Icons.arrow_back_ios_new_sharp,
                                   color: Colors.black,
                                   size: 16,
-                                ),
+                                ), onPressed: () => // send back 
+                                Navigator.pop(context)
+                                ,),
                               ),
                               Row(
                                 children: [

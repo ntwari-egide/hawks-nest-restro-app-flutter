@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hawks_nest_app/screen/layout/dashboard/notification/welcome.dart';
 
 class AppBarWidget extends StatelessWidget {
   const AppBarWidget({Key? key}) : super(key: key);
@@ -22,11 +23,11 @@ class AppBarWidget extends StatelessWidget {
         ),
         Container(
           padding: const EdgeInsets.all(20.0),
-          child: const Row(
+          child: Row(
             // justify center beween children
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
+              const Row(
                 children: [
                   Icon(Icons.location_on, color: Colors.black),
                   SizedBox(width: 10.0),
@@ -37,8 +38,16 @@ class AppBarWidget extends StatelessWidget {
                 ],
               ),
               CircleAvatar(
-                backgroundColor: Color.fromARGB(255, 228, 228, 228),
-                child: Icon(Icons.notifications_active, color: Colors.black),
+                backgroundColor: const Color.fromARGB(255, 228, 228, 228),
+                child:  IconButton(onPressed: () {
+                        //send to the notification widget
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const NotificationPageWidget(),
+                          ),
+                        );
+                      }, icon: const Icon(Icons.notifications_active, color: Colors.black),),
               ),
             ],
           ),
